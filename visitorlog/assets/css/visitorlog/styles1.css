@@ -1,0 +1,11 @@
+/**
+ * Visitor Log styles1 css - 1.0
+ *
+ */
+#wpbody-content > div.update-nag,
+#wpbody-content > div.updated {	
+	margin-left: 190px; 
+}
+html.wp-toolbar { 
+	padding-top: 0 !important; 
+}

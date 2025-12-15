@@ -1,0 +1,648 @@
+/*
+ * Visitorlog Style morphic - 1.0
+ *
+ */
+:root  {
+    --primary-light: #8abdff;
+    --primary: #6d5dfc;
+    --primary-1: #0048BA;
+    --primary-dark: #5b0eeb;
+    --white: #FFFFFF;
+    --greyLight-1: #E4EBF5;
+    --greyLight-2: #c8d0e7;
+    --greyLight-3: #bec8e4;
+    --greyDark: #9baacf;
+}
+*, *::before, *::after  {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html  {
+    box-sizing: border-box;
+    overflow-y: scroll;
+    background: var(--greyLight-1);
+}
+.container  {
+    min-height: 580px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    background: var(--greyLight-1);
+}
+.components  {
+    padding-top: 80px;
+    width: 1360px;
+    height: 550px;
+    border-radius: 48px;
+    box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2), -0.2rem -0.2rem 1.8rem var(--white);
+    padding: 64px;
+}
+.radio  {
+    display: grid;
+    grid-template-columns: 291px 100px 100px;
+    grid-template-columns: repeat(3, -webkit-min-content);
+    grid-template-columns: repeat(3, min-content);
+    grid-gap: 8px 0px;
+    margin-top: 5px;
+}
+.inp  {
+    display: none;
+}
+.radio1  {
+    grid-column: 1;
+    width: 291px;
+    justify-self: left;
+}
+.ii {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.ii:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #0048BA;
+    display: flex;
+    transform: scale(0);
+    transition: transform .3s;
+}
+.inp:checked + .ii:after  {
+    grid-column: 2;
+    transform: scale(1);
+}
+.radio3  {
+    grid-column: 3;
+}
+.text__radio1, .text__radio4, .text__radio5, .text__radio6  {
+    margin: 0px 0px 0px 0px;
+}
+.text__radio1 p, .text__radio4 p, .text__radio5 p, .text__radio6 p  {
+    font-size: 18px;
+    font-weight: 600;
+}
+.chip  {
+    margin-top: -40px;
+    margin-bottom: 40px;
+    width: 45rem;
+    height: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+}
+.chip__icon  {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1rem;
+    margin: 0 0 0 0.0rem;
+    display: flex;
+    font-size: 1.8rem;
+    color: var(--primary);
+}
+.chip p  {
+    font-size: 1.9rem;
+    padding-top: 0.2rem;
+    display: block;
+    text-align: center;
+    color: var(--greyDark);
+}
+.chip__close  {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin: 0 0.5rem;
+    display: flex;
+    font-size: 1.6rem;
+    color: var(--greyLight-3);
+    cursor: pointer;
+}
+.form  {
+    display: grid;
+    grid-template-columns: 191px 200px 100px;
+    grid-gap: 15px 122px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+.form_1  {
+    grid-column: 1;
+    width: 191px;
+    justify-self: left;
+}
+.form_3  {
+    grid-column: 3;
+    justify-self: left;
+}
+.form_3 p  {
+    justify-self: left;
+    font-size: 10px;
+    margin: 10px 0 0 -105px;
+}
+.form__input1, .form__input2  {
+    grid-column: 2;
+    margin-top: -5px;
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-radius: 1rem;
+    font-size: 14px;
+    background: none;
+    font-family: inherit;
+    color: #9baacf;
+}
+.form__input1::-moz-placeholder, .form__input2::-moz-placeholder  {
+    color: #bec8e4;
+}
+.form__input1:-ms-input-placeholder, .form__input2:-ms-input-placeholder  {
+    color: #bec8e4;
+}
+.form__input1::placeholder, .form__input2::placeholder  {
+    color: #bec8e4;
+}
+.form__input1:focus, .form__input2:focus  {
+    outline: none;
+    box-shadow: 0.3rem 0.3rem 0.6rem #c8d0e7, -0.2rem -0.2rem 0.5rem #FFFFFF;
+}
+.switch  {
+    display: grid;
+    grid-template-columns: [col1] 33% [col2] 33% [col3] 34%;
+    grid-template-columns: repeat(3, -webkit-min-content);
+    grid-template-columns: repeat(3, min-content);
+    grid-gap: 15px 105px;
+}
+.switch input  {
+    display: none;
+}
+.div_1  {
+    grid-column: 1;
+    width: 210px;
+    justify-self: left;
+}
+.switch__1, .switch__2, .switch__3  {
+    grid-column: 2;
+    justify-self: center;
+    width: 4rem;
+}
+.div_3  {
+    grid-column: 3;
+}
+.switch__1 label, .switch__2 label, .switch__3 label  {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 1.8rem;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    background: rgba(255, 255, 255, 0);
+    position: relative;
+    cursor: pointer;
+    border-radius: 1.6rem;
+}
+.switch__1 label::after, .switch__2 label::after, .switch__3 label::after  {
+    content: "";
+    position: absolute;
+    left: 0.3rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: var(--greyDark);
+    transition: all 0.3s ease;
+}
+.switch__1 label::before, .switch__2 label::before, .switch__3 label::before  {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(330deg, var(--primary-dark) 0%, var(--primary-1) 50%, var(--primary-light) 100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.switch input:checked ~ label::before  {
+    opacity: 1;
+}
+.switch input:checked ~ label::after  {
+    left: 57%;
+    background: var(--greyLight-1);
+}
+.btn  {
+    width: 130px;
+    height: 44px;
+    border-radius: 12px;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    justify-self: flex-end;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.btn__primary  {
+    background: var(--primary-1);
+    box-shadow: inset 0.2rem 0.2rem 1rem var(--primary-light), inset -0.2rem -0.2rem 1rem var(--primary-dark), 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    color: var(--greyLight-1);
+}
+.btn__primary:hover  {
+    color: var(--greyDark); /* var(--white);*/
+}
+.btn__primary:active  {
+    box-shadow: inset 0.2rem 0.2rem 1rem var(--primary-dark), inset -0.2rem -0.2rem 1rem var(--primary-light);
+}
+.btn__secondary  {
+    color: var(--greyDark);
+}
+.btn__secondary:hover  {
+    color: var(--primary);
+}
+.btn__secondary:active  {
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+}
+.btn p  {
+    font-size: 18px;
+}
+.search  {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.search__input  {
+    width: 20.4rem;
+    height: 4rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    padding-left: 3.8rem;
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+    background: none;
+    font-family: inherit;
+    color: var(--greyDark);
+}
+.search__input::-moz-placeholder  {
+    color: var(--greyLight-3);
+}
+.search__input:-ms-input-placeholder  {
+    color: var(--greyLight-3);
+}
+.search__input::placeholder  {
+    color: var(--greyLight-3);
+}
+.search__input:focus  {
+    outline: none;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+}
+.search__input:focus + .search__icon  {
+    color: var(--primary);
+}
+.search__icon  {
+    height: 2rem;
+    position: absolute;
+    font-size: 2rem;
+    padding: 0 1rem;
+    display: flex;
+    color: var(--greyDark);
+    transition: 0.3s ease;
+}
+.segmented-control  {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    width: 20.4rem;
+    height: 4rem;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.segmented-control input  {
+    display: none;
+}
+.segmented-control > input:checked + label  {
+    transition: all 0.5s ease;
+    color: var(--primary);
+}
+.segmented-control__1, .segmented-control__2, .segmented-control__3  {
+    width: 6.8rem;
+    height: 3.6rem;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--greyDark);
+    transition: all 0.5s ease;
+}
+.segmented-control__1:hover, .segmented-control__2:hover, .segmented-control__3:hover  {
+    color: var(--primary);
+}
+.segmented-control__color  {
+    position: absolute;
+    height: 3.4rem;
+    width: 6.2rem;
+    margin-left: 0.3rem;
+    border-radius: 0.8rem;
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+    pointer-events: none;
+}
+#tab-1:checked ~ .segmented-control__color  {
+    transform: translateX(0);
+    transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+#tab-2:checked ~ .segmented-control__color  {
+    transform: translateX(6.8rem);
+    transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+#tab-3:checked ~ .segmented-control__color  {
+    transform: translateX(13.6rem);
+    transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.icon  {
+    grid-column: 3/4;
+    grid-row: 4/5;
+    display: flex;
+    justify-content: space-between;
+}
+.icon__account, .icon__home, .icon__settings  {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--greyDark);
+    transition: all 0.5s ease;
+}
+.icon__account:active, .icon__home:active, .icon__settings:active  {
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+    color: var(--primary);
+}
+.icon__account:hover, .icon__home:hover, .icon__settings:hover  {
+    color: var(--primary);
+}
+.slider  {
+    grid-column: 3/4;
+    grid-row: 5/6;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+.slider__box  {
+    width: 100%;
+    height: 1rem;
+    cursor: pointer;
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+    border-radius: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider__btn  {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--white);
+    position: absolute;
+    box-shadow: 0px 0.1rem 0.3rem 0px var(--greyLight-3);
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider__btn:hover ~ .slider__tooltip  {
+    opacity: 1;
+}
+.slider__btn::after  {
+    content: "";
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+}
+.slider__color  {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left: 0;
+    z-index: 100;
+    border-radius: inherit;
+    background: var(--primary);
+    background: linear-gradient(-1deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+}
+.slider__tooltip  {
+    position: absolute;
+    top: 2.6rem;
+    height: 2.5rem;
+    width: 3rem;
+    border-radius: 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: var(--primary);
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+@-webkit-keyframes waves  {
+    0%  {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50%  {
+        opacity: 1;
+    }
+    100%  {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+@keyframes waves  {
+    0%  {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50%  {
+        opacity: 1;
+    }
+    100%  {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+.dribbble  {
+    position: fixed;
+    font-size: 2.6rem;
+    right: 2rem;
+    bottom: 1rem;
+    color: #EA4C89;
+}
+.clock  {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    width: 12rem;
+    height: 12rem;
+    justify-self: center;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.clock .hand  {
+    position: absolute;
+    transform-origin: bottom;
+    bottom: 6rem;
+    border-radius: 0.2rem;
+    z-index: 200;
+}
+.clock .hours  {
+    width: 0.4rem;
+    height: 3.2rem;
+    background: var(--greyLight-3);
+}
+.clock .minutes  {
+    width: 0.4rem;
+    height: 4.6rem;
+    background: var(--greyDark);
+}
+.clock .seconds  {
+    width: 0.2rem;
+    height: 5.2rem;
+    background: var(--primary);
+}
+.clock .point  {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background: var(--primary);
+    z-index: 300;
+}
+.clock .marker  {
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+}
+.clock .marker::after  {
+    content: "";
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    box-shadow: inset 1px 1px 1px var(--greyLight-2), inset -1px -1px 1px var(--white);
+    border-radius: 50%;
+    top: 20%;
+    left: 20%;
+    filter: blur(1px);
+}
+.clock .marker__1, .clock .marker__2, .clock .marker__3, .clock .marker__4  {
+    position: absolute;
+    border-radius: 0.1rem;
+    box-shadow: inset 1px 1px 1px var(--greyLight-2), inset -1px -1px 1px var(--white);
+}
+.clock .marker__1, .clock .marker__2  {
+    width: 0.2rem;
+    height: 0.6rem;
+    left: 5.6rem;
+}
+.clock .marker__3, .clock .marker__4  {
+    width: 0.6rem;
+    height: 0.2rem;
+    top: 5.6rem;
+}
+.clock .marker__1  {
+    top: 2%;
+}
+.clock .marker__2  {
+    top: 98%;
+    transform: translateY(-0.6rem);
+}
+.clock .marker__3  {
+    left: 2%;
+}
+.clock .marker__4  {
+    left: 98%;
+    transform: translateX(-0.6rem);
+}
+.circle  {
+    grid-column: 2/3;
+    grid-row: 4/6;
+    width: 9rem;
+    height: 100%;
+    justify-self: center;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+.circle__btn  {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    margin: 0.6rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 3.2rem;
+    color: var(--primary);
+    z-index: 300;
+    background: var(--greyLight-1);
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    cursor: pointer;
+    position: relative;
+}
+.circle__btn.shadow  {
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+}
+.circle__btn .play  {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+.circle__btn .play.visibility  {
+    opacity: 1;
+}
+.circle__btn .pause  {
+    position: absolute;
+    transition: all 0.2s linear;
+}
+.circle__btn .pause.visibility  {
+    opacity: 0;
+}
+.circle__back-1, .circle__back-2  {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    filter: blur(1px);
+    z-index: 100;
+}
+.circle__back-1  {
+    box-shadow: 0.4rem 0.4rem 0.8rem var(--greyLight-2), -0.4rem -0.4rem 0.8rem var(--white);
+    background: linear-gradient(to bottom right, var(--greyLight-2) 0%, var(--white) 100%);
+    -webkit-animation: waves 4s linear infinite;
+    animation: waves 4s linear infinite;
+}
+.circle__back-1.paused  {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+.circle__back-2  {
+    box-shadow: 0.4rem 0.4rem 0.8rem var(--greyLight-2), -0.4rem -0.4rem 0.8rem var(--white);
+    -webkit-animation: waves 4s linear 2s infinite;
+    animation: waves 4s linear 2s infinite;
+}
+.circle__back-2.paused  {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}

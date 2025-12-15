@@ -1,0 +1,30 @@
+/**
+ * Visitor Log semantic CSS 1.0
+ *
+ */
+
+.header { margin-bottom: 15px; } 
+.header .right { float: right; } 
+.header .inline{ display: inline; } 
+.vl-ui .ui.menu { padding-top: 0 !important; } 
+.vl-ui #vl-main-menu .menu .item { font-size: .95em; } 
+.vl-ui .ui.vertical.menu > .item:first-child { border-radius: 0 !important; } 
+.vl-ui .ui.message:last-child { margin-bottom: 1em; } 
+.ui.table thead td, .ui.table thead th, .ui.table tfoot td, .ui.table tfoot th { background: #23282D; color: white; } 
+.iconlbl { width: 40px; display: inline-block; } 
+.vl-ui .ui.toggle.checkbox input:checked ~ .box::before, .vl-ui .ui.toggle.checkbox input:checked ~ label::before { background-color: #7fb100 !important; } 
+.vl-ui .alternate { background-color: rgba( 255, 0, 0, 0 ) !important; } 
+.vl-ui .ui.search, .vl-ui .icon.search { background: none !important; } 
+.vl-ui .ui.segment { border-radius: 0; border: 0; margin-top: 0; margin-bottom: 10px; box-shadow: none; } 
+.vl-ui .ui.alt.segment { border-top: none; padding-top: 0; } 
+.vl-ui .ui.alt.segment { padding: 0 !important; } 
+.vl-ui { padding: 0 !important; } 
+.vl-ui { padding-right: 0 !important; } 
+.vl-ui .vl-sidebar-left { padding-left: 0 !important; } 
+.vl-ui tr.active { background: #f9fafb !important; } 
+.vl-ui .ui.message.green a:not(.button) { color: #7fb100; font-weight: bolder; text-decoration: underline !important;} 
+.vl-ui .ui.message.yellow a:not(.button) { color: #b58105; font-weight: bolder; text-decoration: underline !important;} 
+.vl-ui .ui.message.info a:not(.button) { color: #276f86; font-weight: bolder; text-decoration: underline !important;} 
+.vl-ui .ui.message.red a:not(.button) { color: #a00000; font-weight: bolder; text-decoration: underline !important;} 
+.vl-ui .ui.message a:not(.button) { color: rgba(0,0,0,.87); font-weight: bolder; text-decoration: underline !important;} 
+.vl-ui [data-tooltip][data-inverted]:after { z-index: 4 !important; } .vl-ui .progress .bar {border-radius: 0;}
