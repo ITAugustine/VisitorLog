@@ -1,6 +1,7 @@
 
 The VisitorLog plugin adds useful functionality to your site in the field of security, statistics and some other useful functions.
- 
+
+![Screenshot-1](images/screenshot-1.png) 
 ## Description
 
 The plugin implements four main directions:
