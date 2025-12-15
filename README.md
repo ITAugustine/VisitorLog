@@ -69,3 +69,5 @@ The plugin implements four main directions:
 ### Full version of the plugin
 
 The full version of the plugin can be obtained on the manufacturer's website https://itaugustine.com
+
+![Screenshot-4](images/screenshot-4.png) 
